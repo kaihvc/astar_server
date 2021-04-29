@@ -113,7 +113,7 @@ def path_planner(sg, start, end):
     return world_path
 
 app = flask.Flask(__name__)
-env_map = np.transpose(np.load('map_processed.npy'))
+env_map = np.transpose(np.load('map_final.npy'))
 state_graph = convert_to_graph(env_map, len(env_map), len(env_map[0]))
 
 world_size = 7
